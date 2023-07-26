@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <script src="Training_Assignment::js/custom_review.js"></script>
+        <css src="Training_Assignment::css/custom_review.css" rel="stylesheet" type="text/css"  />
+    </head>
+    <body>
+        <referenceContainer name="content">
+            <block class="Training\Assignment\Block\Form" name="assignment_form" template="Training_Assignment::review_form.phtml" cacheable="false" />
+        </referenceContainer>
+    </body>
+</page>

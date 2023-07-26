@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="Custom_Admin" sortOrder="120" translate="label">
+            <label>Custom Admin</label>
+        </tab>
+        <section id="First" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>First Section</label>
+            <tab>Custom_Admin</tab>
+            <resource>SimplifiedMagento_AssignmentEleven::parent</resource>
+            <group id="Firstgroup" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>First Group</label>
+                <field id="FirstField" translate="label" sortOrder="0" type="text" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>First Text Field</label>
+                </field>
+                <field id="SecondField" translate="label" sortOrder="0" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Yes/No</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="FourthField" translate="label" sortOrder="0" type="multiselect" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Multi Select</label>
+                    <source_model>SimplifiedMagento\AssignmentEleven\Model\AdminArray</source_model>
+                </field>
+                <field id="FifthField" translate="label" sortOrder="0" type="select" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select</label>
+                    <source_model>SimplifiedMagento\AssignmentEleven\Model\AdminArray</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

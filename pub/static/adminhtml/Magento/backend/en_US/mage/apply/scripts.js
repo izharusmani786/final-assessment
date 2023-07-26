@@ -1,0 +1,1 @@
+/var/www/html/bhpc/lib/web/mage/apply/scripts.js

@@ -1,0 +1,1 @@
+/var/www/html/bhpc/lib/web/requirejs/require.js

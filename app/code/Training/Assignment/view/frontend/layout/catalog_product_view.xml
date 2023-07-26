@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <head>
+        <script src="Training_Assignment::js/custom_review.js"></script>
+        <css src="Training_Assignment::css/custom_review.css" rel="stylesheet" type="text/css"  />
+    </head>
+    <body>
+        <referenceBlock name="product.info.form.content">
+            <block class="Magento\Catalog\Block\Product\View" name="catalog.product.view.extrablock"
+                   as="extra_options" before="product.info.addtocart" template="Training_Assignment::catalog/product/view/custom.phtml"/>   
+        </referenceBlock>
+    </body>
+</page>

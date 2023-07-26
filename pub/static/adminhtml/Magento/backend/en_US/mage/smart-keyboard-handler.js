@@ -1,0 +1,1 @@
+/var/www/html/bhpc/lib/web/mage/smart-keyboard-handler.js
