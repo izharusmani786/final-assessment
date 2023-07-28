@@ -1,0 +1,96 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+th {
+  background-color: #f2f2f2;
+}
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Form CSS*/
+
+.form-container {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-group {
+  margin-bottom: 20px;
+}
+.form-label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.form-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.form-textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: vertical;
+}
+.form-submit {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.form-submit:hover {
+  background-color: #45a049;
+}
+
+/* Review Listing Page Data */
+
+.product_review_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+a.button_review_form {
+  background: red;
+  padding: 10px 24px;
+  color: #fff;
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}
+.product_review_header h1 {
+  margin-bottom: 0;
+}
+.product_review_header {
+  margin-bottom: 25px;
+}
+
+.product.attribute.custom a {
+  background: red;
+  padding: 10px 20px;
+  display: inline-block;
+  color: #fff;
+  font-weight: bold;
+  margin-top: 15px;
+  font-size: 18px;
+  text-decoration: none;
+}

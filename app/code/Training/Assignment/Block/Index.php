@@ -8,6 +8,7 @@ use Training\Assignment\Model\ReviewsFactory;
 use Magento\Framework\App\Request\Http;
 use Magento\Catalog\Model\ProductFactory;
 use Magento\Framework\App\Config\ScopeConfigInterface;
+use Magento\Customer\Model\SessionFactory;
 
 class Index extends \Magento\Framework\View\Element\Template
 {
@@ -15,12 +16,14 @@ class Index extends \Magento\Framework\View\Element\Template
     protected $request;
     protected $_productFactory;
     protected $scopeConfig;
+    protected $sessionFactory;
 
     public function __construct(
         Context $context,
         ReviewsFactory $collection,
         ProductFactory $productFactory,
         ScopeConfigInterface $scopeConfig,
+        SessionFactory $sessionFactory,
         Http $request,
         array $data = []
     ) {
@@ -28,6 +31,7 @@ class Index extends \Magento\Framework\View\Element\Template
         $this->request = $request;
         $this->_productFactory = $productFactory;
         $this->scopeConfig = $scopeConfig;
+        $this->sessionFactory = $sessionFactory;
         parent::__construct($context, $data);
     }
 
@@ -41,6 +45,13 @@ class Index extends \Magento\Framework\View\Element\Template
         return $data;
     }
 
+    public function getCustomerId()
+    {
+        $customerSession = $this->sessionFactory->create();
+        $customerId = $customerSession->getCustomer()->getId();
+        return $customerId;
+    }
+
     public function getProductId()
     {
         $product_id = $this->request->getParam('id');
@@ -48,6 +59,24 @@ class Index extends \Magento\Framework\View\Element\Template
     }
 
     public function getProductName()
+    {
+        //$product_custom_title = $this->scopeConfig->getValue('FirstSection/Firstgroup/FirstField');
+        //$title_status = $this->scopeConfig->getValue('FirstSection/Firstgroup/SecondField');
+
+        $product_id = $this->request->getParam('id');
+        $product = $this->_productFactory->create()->load($product_id);
+        $name = $product->getName();
+
+        // if($title_status == 1){
+        //     $name = $product_custom_title;
+        // } else {
+        //     $name = $product_name;
+        // }
+
+        return $name;
+    }
+
+    public function getProductTitle()
     {
         $product_custom_title = $this->scopeConfig->getValue('FirstSection/Firstgroup/FirstField');
         $title_status = $this->scopeConfig->getValue('FirstSection/Firstgroup/SecondField');

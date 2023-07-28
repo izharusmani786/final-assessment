@@ -23,4 +23,7 @@
             </argument>
         </arguments>
     </type>
+
+    <preference for="Training\Assignment\Api\GetProductsInterface" type="Training\Assignment\Model\GetProducts" />
+
 </config>

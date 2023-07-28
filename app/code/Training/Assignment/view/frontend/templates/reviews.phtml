@@ -1,6 +1,10 @@
 <div class="product_review_header">
-  <h1>Product Reviews</h1>
-  <a class="button_review_form" href="/review/page/form/id/<?php echo $block->getProductId() ?>">Add Product Review</a>
+  <h1><?php echo $block->getProductTitle() ?> - Product Reviews </h1>
+  <?php if($block->getCustomerId()){ ?>
+    <a class="button_review_form" href="/review/page/form/id/<?php echo $block->getProductId() ?>">Add Product Review</a>
+  <?php } else { ?>
+    <a class="button_review_form" href="http://bhpclocal.in/index.php/customer/account/login/">Sign In to Add Review</a>
+  <?php } ?>
 </div>
 <table>
   <thead>

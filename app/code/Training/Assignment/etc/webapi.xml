@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- get booking list Api -->
+    <route url="/V1/get/reviewProductList" method="GET">
+        <service class="Training\Assignment\Api\GetProductsInterface" method="getData" />
+        <resources>
+            <resource ref="anonymous" />
+        </resources>
+    </route>
+  
+ </routes>
